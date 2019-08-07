@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        debugger;
+
+        function displayDetails(testscore, testscore2, testscore3) {
+                document.write(this.id + "<br />")
+                document.write(this.name + "<br />")
+                document.write(testscore + "<br />")
+                document.write(testscore2 + "<br />")
+                document.write(testscore3 + "<br />")
+            }
+
+        var studant1 = {
+            id: 1,
+            name: "Bob",
+        }
+
+        var studant2 = {
+            id: 2,
+            name: "John",
+        }
+    
+    this.id = 3
+    this.name = "Helena"    
+
+    displayDetails.apply(studant1, [10, 20, 30])
+    displayDetails.call(studant2, 20)
+    displayDetails.call(this,30)
+
+
+
+        
+    </script>
+</body>
+</html>

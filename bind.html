@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        debugger;
+
+        function displayDetails(testscore, testscore2, testscore3) {
+                document.write(this.id + "<br />")
+                document.write(this.name + "<br />")
+                document.write(testscore + "<br />")
+            }
+
+        var studant1 = {
+            id: 1,
+            name: "Bob",
+        }
+
+        var studant2 = {
+            id: 2,
+            name: "John",
+        }
+    
+    this.id = 3
+    this.name = "Helena"    
+
+var displayForStudant1 = displayDetails.bind(studant1);
+displayForStudant1(10, 20, 30)
+var displayForStudant2 = displayDetails.bind(studant2, 70, 80, 90)
+displayForStudant2()
+displayForStudant2.displayDetails = displayForStudant1
+displayForStudant2.displayDetails(40)
+
+
+
+        
+    </script>
+</body>
+</html>

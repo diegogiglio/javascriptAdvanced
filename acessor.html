@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var creditCar = {
+        _name: "John",
+
+        get name() {
+            return this._name
+        },
+
+        set name(value) {
+            this._name = value;
+        }
+    }
+
+    Object.defineProperty(creditCar, "_name", isEnumerable)
+
+    console.log(creditCar.name)
+    creditCar.name="Bob"
+    console.log(creditCar.name)
+    creditCar._name = 'Diego'
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>    
+    function Flight(airlines, flightNumber){
+        this.airlines = airlines,
+        this.flightNumber = flightNumber
+
+        this.display = function(){
+            console.log(this.airlines)
+            console.log(this.flightNumber)
+        }
+        return 
+    }
+
+    var flight1 = new Flight("American Airlines", "AA123")
+    var flight2 = new Flight("South West", "SW456")
+
+    flight1.display()
+    flight2.display()
+
+    console.log(flight1 instanceof Flight)
+    console.log(flight2 instanceof Flight)
+
+    console.log(flight1.constructor === Flight)
+
+    </script>
+</body>
+</html>
